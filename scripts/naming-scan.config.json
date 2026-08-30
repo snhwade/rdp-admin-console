@@ -1,0 +1,23 @@
+{
+  "$comment": [
+    "命名中性化扫描配置（risk-console-redesign / Requirement 1.1, 1.3, 1.4）。",
+    "scanRoots 列出本期新增的前端代码/资源路径（相对 admin-console 根）。",
+    "扫描器仅扫描本期新增资产，旧资产不在范围内。",
+    "vendorTerms 为厂商专有名词清单，大小写不敏感匹配；留空则跳过扫描。"
+  ],
+  "vendorTerms": [],
+  "scanRoots": [
+    "src/api/console",
+    "src/pages/events",
+    "src/pages/field-library",
+    "src/pages/event-fields",
+    "src/pages/verify-strategies",
+    "src/pages/rule-package-wall",
+    "src/pages/decision-flow-wall",
+    "src/pages/rating-model-wall"
+  ],
+  "excludeGlobs": [
+    "**/node_modules/**",
+    "**/dist/**"
+  ]
+}
